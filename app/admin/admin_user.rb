@@ -1,11 +1,14 @@
 ActiveAdmin.register AdminUser do
   config.sort_order = "email_asc"
 
+  config.batch_actions = false
+
   index do
     selectable_column
     column :email, sortable: :email do |admin_user|
       link_to admin_user.email, [:admin, admin_user]
     end
+    column :role
     column :sign_in_count
     column :last_sign_in_at
     column :last_sign_in_ip
@@ -31,6 +34,7 @@ ActiveAdmin.register AdminUser do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :role, as: :radio, collection: ["Super Admin", "Regular Admin"] if resource != AdminUser.first && resource.super_admin?
     end
     f.actions
   end

@@ -1,8 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../acceptance_helper')
 
 feature "Admin User" do
-  let!(:admin_user)   { create(:admin_user) }
-  let!(:another_user) { create(:admin_user) }
+  let!(:admin_user)   { create(:admin_user, role: "Super Admin") }
+  let!(:another_user) { create(:admin_user, role: "Super Admin") }
 
   background do
     login_with admin_user, $admin_user_password

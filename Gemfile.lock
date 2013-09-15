@@ -68,6 +68,7 @@ GEM
     cache_digests (0.3.1)
       actionpack (>= 3.2)
       thread_safe
+    cancan (1.6.10)
     capistrano (2.15.5)
       highline
       net-scp (>= 1.0.0)
@@ -330,6 +331,7 @@ DEPENDENCIES
   ancestry
   bcrypt-ruby (~> 3.0.0)
   cache_digests
+  cancan (~> 1.6.0)
   capistrano
   capybara
   carrierwave

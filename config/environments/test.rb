@@ -18,7 +18,8 @@ Hrmap::Application.configure do
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  # Test caching while developing
+  config.action_controller.perform_caching = true
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
@@ -30,7 +31,10 @@ Hrmap::Application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'hrmap.dev' }
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  config.cache_store = :dalli_store
 end

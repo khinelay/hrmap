@@ -56,7 +56,6 @@ group :test do
   gem 'rspec-example_steps'
   gem 'email_spec'
   gem 'database_cleaner'
-  gem 'simplecov', :require => false
   gem 'capybara'
   gem 'selenium-webdriver', "~> 2.35.1"
 end
@@ -72,4 +71,5 @@ end
 
 group :production do
   gem 'puma', '~> 2.0'
+  gem 'newrelic_rpm'
 end

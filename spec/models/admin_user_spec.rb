@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe AdminUser do
-  let!(:admin_user) { create(:admin_user) }
+  let!(:admin_user) { create(:admin_user, role: "Super Admin") }
 
   it "shouldn't destroy last AdminUser" do
     admin_user.destroy

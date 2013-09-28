@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../acceptance_helper')
 
 feature "Department" do
-  let!(:admin_user)       { create(:admin_user) }
+  let!(:admin_user)       { create(:admin_user, role: "Super Admin") }
 
   let!(:f_department)     { create(:department) }
   let!(:f_f_department)   { create(:department, parent_id: f_department.id) }

@@ -1,13 +1,13 @@
 # Admin User
 # Create 3 Admin Users
 AdminUser.destroy_all
-admin_user = AdminUser.new email: "c@talin.ro", password: "123qwe123", password_confirmation: "123qwe123"
+admin_user = AdminUser.new email: "c@talin.ro", password: "123qwe123", password_confirmation: "123qwe123", role: "Super Admin"
 p "Admin User #{admin_user.email} created." if admin_user.save
 
-admin_user = AdminUser.new email: "admin1@hrmap.dev", password: "123qwe123", password_confirmation: "123qwe123"
+admin_user = AdminUser.new email: "admin1@hrmap.dev", password: "123qwe123", password_confirmation: "123qwe123", role: "Regular Admin"
 p "Admin User #{admin_user.email} created." if admin_user.save
 
-admin_user = AdminUser.new email: "admin2@hrmap.dev", password: "123qwe123", password_confirmation: "123qwe123"
+admin_user = AdminUser.new email: "admin2@hrmap.dev", password: "123qwe123", password_confirmation: "123qwe123", role: "Regular Admin"
 p "Admin User #{admin_user.email} created." if admin_user.save
 
 # Departments

@@ -6,6 +6,12 @@ class AdminUser < ActiveRecord::Base
 
   before_destroy :last_admin_user?
 
+  validates_presence_of :role
+
+  def super_admin?
+    role == "Super Admin"
+  end
+
 private
 
   def last_admin_user?

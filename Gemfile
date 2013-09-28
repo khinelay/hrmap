@@ -35,6 +35,7 @@ gem "redcarpet"
 
 gem 'activeadmin', git: 'git://github.com/gregbell/active_admin.git', branch: 'rails4'
 gem "activeadmin-sortable-tree", :github => "nebirhos/activeadmin-sortable-tree", :branch => "master"
+gem "cancan", "~>1.6.0"
 
 gem 'ancestry'
 
@@ -55,7 +56,6 @@ group :test do
   gem 'rspec-example_steps'
   gem 'email_spec'
   gem 'database_cleaner'
-  gem 'simplecov', :require => false
   gem 'capybara'
   gem 'selenium-webdriver', "~> 2.35.1"
 end
@@ -71,4 +71,5 @@ end
 
 group :production do
   gem 'puma', '~> 2.0'
+  gem 'newrelic_rpm'
 end

@@ -1,0 +1,2 @@
+class HrController < ApplicationController
+end

@@ -213,4 +213,7 @@ ActiveAdmin.setup do |config|
 
   # == Authorization
   config.authorization_adapter = ActiveAdmin::CanCanAdapter
+
+  # == Custom components
+  config.view_factory.footer = CustomFooter
 end

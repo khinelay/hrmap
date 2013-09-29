@@ -4,6 +4,26 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # Active Admin Overrides
-  require 'active_admin/active_admin_views_pages_base.rb'
-  require 'active_admin/index_as_sortable.rb'
+  before_filter :active_admin_override
+
+  # Settings load
+  before_filter :get_settings
+
+private
+
+  def active_admin_override
+    require 'active_admin/index_as_sortable.rb' if request[:controller].include? "admin"
+  end
+
+  def get_settings
+    if request[:controller].include? "admin"
+      Setting.where(category: ["admin", "all"]).each do |setting|
+        SETTINGS[setting[:name].to_sym] = setting[:value]
+      end
+    else
+      Setting.where(category: ["site", "all"]).each do |setting|
+        SETTINGS[setting[:name].to_sym] = setting[:value]
+      end
+    end
+  end
 end

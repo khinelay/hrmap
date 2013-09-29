@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe PublicHelper do
+describe PostsController do
 
 end

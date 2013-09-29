@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>HR Map</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-<%= yield %>
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</body>
+  	<title><%= content_for?(:title) ? yield(:title) : "HR Map" %></title>
+
+  	<%= stylesheet_link_tag    "application", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <section class="wrapper">
+      <section class="sidebar">
+        <div class="note">
+          <div class="icon-info-sign"></div>
+          You can find above important issues from each section and also your latest searches.
+        </div>
+      </section>
+
+      <header>
+        <nav>
+          <div class="row">
+            <div class="large-6 columns">
+              <ul class="sidebar">
+                <li><%= link_to "", "", class: "icon icon-quick-actions", id: "quick-actions-link" %></li>
+              </ul>
+            </div>
+            <div class="large-6 columns">
+              <%= render partial: "shared/top_nav" %>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="content">
+        <%= yield %>
+      </section>
+
+      <footer>
+        <%= t('site.footer.copyright', year: Time.now.year, company: SETTINGS[:company], powered_by: link_to("HR Map", "https://github.com/ducknorris/hrmap", target: "_blank")).html_safe %>
+      </footer>
+    </section>
+  </body>
 </html>

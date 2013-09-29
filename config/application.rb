@@ -32,5 +32,11 @@ module Hrmap
       g.test_framework :rspec, fixture: false, views: false, helper: true
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+
+    # Add the fonts path
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
   end
 end

@@ -1,0 +1,120 @@
+@import "mixins";
+@import "icons";
+
+$header-bg-color: #c11b22;
+$header-text-color: #fff;
+$header-link-color: #ff8b92;
+$header-link-hover-color: #fff;
+
+$post-important-color: #c11b22;
+
+$footer-bg-color: #c11b22;
+$footer-text-color: #fff;
+$footer-link-color: #fff;
+$footer-link-hover-color: #fff;
+
+$sidebar-bg-color: #99050c;
+$sidebar-text-color: #4f0004;
+$sidebar-border-color: #7b0005;
+
+.icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: $header-bg-color;
+
+  a {
+    color: $header-link-color;
+    text-decoration: none;
+    @include transition(0.3s, all);
+
+    &:hover, &.active {
+      color: $header-link-hover-color;
+      @include transition(0.3s, all);
+    }
+  }
+
+  nav ul {
+    margin-top: 10px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 22px;
+      height: 30px;
+      vertical-align: middle;
+      font-size: 20px;
+    }
+  }
+
+  nav ul.sidebar {
+    text-align: left;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+section.content {
+  margin: 60px 50px 50px 50px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  .post {
+    height: 138px;
+    margin: 10px 0;
+
+    &.important {
+      border: 1px solid $post-important-color;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  padding: 8px 0 0 0;
+  background-color: $footer-bg-color;
+  font-size: 14px;
+  color: $footer-text-color;
+  text-align: center;
+
+  a {
+    color: $footer-link-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: $footer-link-hover-color;
+      text-decoration: none;
+    }
+  }
+}
+
+section.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 400px;
+  margin-left: -400px;
+  background: $sidebar-bg-color;
+  border-right: 2px solid $sidebar-border-color;
+
+  .note {
+    width: 375px;
+    height: 80px;
+    margin-top: 30px;
+    color: $sidebar-text-color;
+    font-size: 24px;
+    text-align: center;
+  }
+}

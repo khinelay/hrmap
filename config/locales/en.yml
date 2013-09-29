@@ -23,3 +23,6 @@ en:
     children_departments: "Children Department(s)"
     leaded_by: "Leaded by"
     employees: "Employees"
+  site:
+    footer:
+      copyright: "Copyright © %{year} - %{company}. Powered by %{powered_by}."

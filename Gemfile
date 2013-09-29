@@ -29,6 +29,9 @@ gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'compass-rails' # you need this or you get an err
+gem 'zurb-foundation', '~> 4.0.0'
+
 gem 'devise', "~> 3.1.0"
 
 gem "redcarpet"
@@ -61,6 +64,8 @@ group :test do
 end
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rack-mini-profiler'
   gem 'pry-rails'
   gem 'guard-rspec'

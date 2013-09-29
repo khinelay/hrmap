@@ -1,0 +1,17 @@
+<ul>
+  <% [
+      ["Decizii", posts_path(category: "decizii")],
+      ["Stiri", posts_path(category: "stiri")],
+      ["Resurse umane", hr_path],
+      ["Documente", posts_path(category: "documente")],
+      ["Biblioteca", posts_path("biblioteca")]
+    ].each do |path| %>
+    <li><%= link_to path[0], path[1], class: request.path == path[1] ? "active" : "" %></li>
+  <% end %>
+  <% [
+      [user_path, "icon-user-account"],
+      [settings_path, "icon-settings"]
+    ].each do |path| %>
+    <li><%= link_to "", path[0], class: request.path == path[0] ? "icon #{path[1]} active" : "icon #{path[1]}" %></li>
+  <% end %>
+</ul>

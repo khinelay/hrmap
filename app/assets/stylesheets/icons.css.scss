@@ -1,0 +1,50 @@
+.icon-logout {
+  background: image-url("icons.png") 0px -32px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  &:hover, &.active {
+    background: image-url("icons.png") 0px 0px no-repeat;
+  }
+}
+
+.icon-quick-actions {
+  background: image-url("icons.png") -96px -32px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  &:hover, &.active {
+    background: image-url("icons.png") -96px 0px no-repeat;
+  }
+}
+
+.icon-settings {
+  background: image-url("icons.png") -32px -32px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  &:hover, &.active {
+    background: image-url("icons.png") -32px 0px no-repeat;
+  }
+}
+
+.icon-user-account {
+  background: image-url("icons.png") -64px -32px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  &:hover, &.active {
+    background: image-url("icons.png") -64px 0px no-repeat;
+  }
+}
+
+.icon-info-sign {
+  background: image-url("icons.png") -128px 0px no-repeat;
+  width: 38px;
+  height: 38px;
+  margin: 15px auto;
+}

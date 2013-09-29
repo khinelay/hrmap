@@ -16,6 +16,15 @@ $footer-link-hover-color: #fff;
 $sidebar-bg-color: #99050c;
 $sidebar-text-color: #4f0004;
 $sidebar-border-color: #7b0005;
+$sidebar-section-text-color: #fff;
+$sidebar-section-bg-color: #bc272f;
+$sidebar-section-border-color: #5b0206;
+$sidebar-category-text-color: #fff;
+$sidebar-category-bg-color: #a31e25;
+$sidebar-category-border-color: #860e14;
+$sidebar-link-color: #fff;
+$sidebar-link-bg-color: #99050c;
+$sidebar-link-border-color: #76060b;
 
 .icon {
   display: block;
@@ -103,11 +112,79 @@ footer {
 section.sidebar {
   position: fixed;
   top: 0;
-  height: 100%;
   width: 400px;
+  height: 100%;
+  overflow: auto;
   margin-left: -400px;
   background: $sidebar-bg-color;
   border-right: 2px solid $sidebar-border-color;
+
+  ul li {
+    padding: 0;
+    list-style: none inside;
+    font-size: 20px;
+
+    a {
+      display: block;
+      width: 398px;
+      padding: 3px 10px;
+      color: $sidebar-section-text-color;
+      background-color: $sidebar-section-bg-color;
+      overflow: hidden;
+      border-bottom: 1px solid $sidebar-section-border-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.attachment {
+        float: right;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        margin: 4px 1px 0;
+      }
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        font-size: 16px;
+        padding: 0;
+
+        a {
+          color: $sidebar-category-text-color;
+          background-color: $sidebar-category-bg-color;
+          border-bottom: 1px solid $sidebar-category-border-color;
+        }
+
+        ul li {
+          font-size: 12px;
+
+          a {
+            color: $sidebar-link-color;
+            background-color: $sidebar-link-bg-color;
+            height: 26px;
+            overflow: hidden;;
+            border-bottom: 1px solid $sidebar-link-border-color;
+
+            &.one {
+              width: 370px;
+            }
+
+            &.two {
+              width: 362px;
+            }
+
+            &.three {
+              width: 344px;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .note {
     width: 375px;

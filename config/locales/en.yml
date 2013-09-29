@@ -24,5 +24,9 @@ en:
     leaded_by: "Leaded by"
     employees: "Employees"
   site:
+    quick_actions:
+      important_issues: "Important Issues"
+      latest_searches: "Latest Searches"
+      note: "You can find above important issues from each section and also your latest searches."
     footer:
       copyright: "Copyright © %{year} - %{company}. Powered by %{powered_by}."

@@ -48,3 +48,24 @@
   height: 38px;
   margin: 15px auto;
 }
+
+.icon-small-excel {
+  background: asset-url("icons.png") -186px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-small-pdf {
+  background: asset-url("icons.png") -168px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-small-word {
+  background: asset-url("icons.png") -168px -17px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}

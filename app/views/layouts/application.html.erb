@@ -25,9 +25,93 @@
 
     <section class="wrapper">
       <section class="sidebar">
+        <ul class="quick-actions">
+          <li>
+            <%= link_to "#{t('site.quick_actions.important_issues')} (11)" %>
+            <ul>
+              <li>
+                <%= link_to "Decizii (1)" %>
+                <ul>
+                  <li>
+                    <%= link_to "", "", class: "attachment icon-small-pdf" %>
+                    <%= link_to "", "", class: "attachment icon-small-excel" %>
+                    <%= link_to "", "", class: "attachment icon-small-word" %>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ip...", "", class: "three" %>
+                  </li>
+                </ul>
+              </li>
+              <li><%= link_to "Stiri (0)" %></li>
+              <li>
+                <%= link_to "Resurse Umane (4)" %>
+                <ul>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "Help Desk Department is now sub-division of IT Department" %></li>
+                  <li><%= link_to "Jane Doe is a new employeee in IT Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "Help Desk Department is now sub-division of IT Department" %></li>
+                  <li><%= link_to "Jane Doe is a new employeee in IT Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "Help Desk Department is now sub-division of IT Department" %></li>
+                  <li><%= link_to "Jane Doe is a new employeee in IT Department - Sep 23, 2013" %></li>
+                  <li><%= link_to "John Doe is the head of HR Department - Sep 23, 2013" %></li>
+                </ul>
+              </li>
+              <li>
+                <%= link_to "Documente (10)" %>
+                <ul>
+                  <li>
+                    <%= link_to "", "", class: "attachment icon-small-pdf" %>
+                    <%= link_to "", "", class: "attachment icon-small-excel" %>
+                    <%= link_to "", "", class: "attachment icon-small-word" %>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ip...", "", class: "three" %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "", "", class: "attachment icon-small-pdf" %>
+                    <%= link_to "", "", class: "attachment icon-small-word" %>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsu...", "", class: "two" %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "", "", class: "attachment icon-small-excel" %>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum ...", "", class: "one" %>
+                  </li>
+                  <li>
+                    <%= link_to "", "", class: "attachment icon-small-pdf" %>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum ...", "", class: "one" %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                  <li>
+                    <%= link_to "Integer posuere erat a ante venenatis dapibus posu lorem ipsum dol..." %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to "#{t('site.quick_actions.latest_searches')} (10)" %>
+          </li>
+        </ul>
         <div class="note">
           <div class="icon-info-sign"></div>
-          You can find above important issues from each section and also your latest searches.
+          <%= t 'site.quick_actions.note' %>
         </div>
       </section>
 

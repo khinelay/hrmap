@@ -8,8 +8,8 @@ feature "Admin User" do
     login_with admin_user, $admin_user_password
   end
 
-  Steps "Index page" do
-    Given "I'm on Admin User Index page" do ;
+  Steps "Admin User visits existing Admin Users page" do
+    Given "I'm on Admin User Index page" do
       visit admin_admin_users_path
     end
 
@@ -21,7 +21,7 @@ feature "Admin User" do
     end
   end
 
-  Steps "Show page" do
+  Steps "Admin User visits an Admin User page" do
     Given "I'm on Admin User Show page" do
       visit admin_admin_user_path(admin_user)
     end

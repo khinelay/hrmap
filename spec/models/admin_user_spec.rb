@@ -10,3 +10,4 @@ describe AdminUser do
     AdminUser.last.should eq(admin_user)
   end
 end
+s

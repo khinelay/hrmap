@@ -43,7 +43,7 @@ feature "Department" do
     end
   end
 
-  Scenario "Admin User visits a Department page" do
+  scenario "Admin User visits a Department page" do
     Given "I'm on Department Show page" do
       visit admin_department_path(f_s_department)
     end

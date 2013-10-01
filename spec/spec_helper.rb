@@ -16,48 +16,46 @@ RSpec.configure do |config|
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-  RSpec.configure do |config|
-    config.mock_with :rspec
-    config.include Devise::TestHelpers, :type => :controller
+  config.mock_with :rspec
+  config.include Devise::TestHelpers, :type => :controller
 
-    # If true, the base class of anonymous controllers will be inferred
-    # automatically. This will be the default behavior in future versions of
-    # rspec-rails.
-    config.infer_base_class_for_anonymous_controllers = false
+  # If true, the base class of anonymous controllers will be inferred
+  # automatically. This will be the default behavior in future versions of
+  # rspec-rails.
+  config.infer_base_class_for_anonymous_controllers = false
 
-    # Run specs in random order to surface order dependencies. If you find an
-    # order dependency and want to debug it, you can fix the order by providing
-    # the seed, which is printed after each run.
-    #     --seed 1234
-    config.order = "random"
+  # Run specs in random order to surface order dependencies. If you find an
+  # order dependency and want to debug it, you can fix the order by providing
+  # the seed, which is printed after each run.
+  #     --seed 1234
+  config.order = "random"
 
-    config.include(EmailSpec::Helpers)
-    config.include(EmailSpec::Matchers)
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 
-    config.before(:suite) do
-      DatabaseCleaner.strategy = :truncation
-    end
-
-    config.treat_symbols_as_metadata_keys_with_true_values = true
-    config.filter_run focus: true
-    config.run_all_when_everything_filtered = true
-
-    config.before(:all) do
-      DeferredGarbageCollection.start
-    end
-
-    config.after(:all) do
-      DeferredGarbageCollection.reconsider
-    end
-
-    config.before(:each) do
-      DatabaseCleaner.start
-    end
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
-
-    config.include FactoryGirl::Syntax::Methods
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
   end
+
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
+  config.before(:all) do
+    DeferredGarbageCollection.start
+  end
+
+  config.after(:all) do
+    DeferredGarbageCollection.reconsider
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+  config.include FactoryGirl::Syntax::Methods
 end
 

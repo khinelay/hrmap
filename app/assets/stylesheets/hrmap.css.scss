@@ -32,6 +32,16 @@ $sidebar-link-border-color: #76060b;
   height: 30px;
 }
 
+.wrapper {
+  margin-left: 0;
+  @include transition(0.350s, all, ease-in);
+
+  &.inactive {
+    margin-left: 400px;
+    @include transition(0.350s, all, ease-out);
+  }
+}
+
 header {
   position: fixed;
   top: 0;

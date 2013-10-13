@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/acceptance_helper')
 
 feature "Quick Links" do
-  scenario "I'm accessing the #sidebar links", js: true do
+  Steps "I'm accessing the #sidebar links", js: true do
     Given "I'm on Home Page" do
       visit root_path
     end

@@ -30,7 +30,7 @@ feature "Department" do
     f_s_department.update_attribute :user_id, f_s_user.id
   end
 
-  Steps "Admin User visits existing Departments page" do
+  Steps "Admin Departments page" do
     Given "I'm on Department Index page" do ;
       visit admin_departments_path
     end
@@ -43,7 +43,7 @@ feature "Department" do
     end
   end
 
-  scenario "Admin User visits a Department page" do
+  Steps "Admin Department page" do
     Given "I'm on Department Show page" do
       visit admin_department_path(f_s_department)
     end

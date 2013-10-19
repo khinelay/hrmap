@@ -1,0 +1,8 @@
+%ul
+  %li= active_link_to "Decizii", posts_path(category: "decizii"), request.path
+  %li= active_link_to "Stiri", posts_path(category: "stiri"), request.path
+  %li= active_link_to "Resurse umane", hr_path, request.path
+  %li= active_link_to "Documente", posts_path(category: "documente"), request.path
+  %li= active_link_to "Biblioteca", posts_path(category: "biblioteca"), request.path
+  %li= active_link_to "", user_path, request.path, true
+  %li= active_link_to "", settings_path, request.path, true

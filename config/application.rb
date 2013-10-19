@@ -31,7 +31,11 @@ module Hrmap
     config.generators do |g|
       g.test_framework :rspec, fixture: false, views: false, helper: true
       g.fixture_replacement :factory_girl, dir: "spec/factories"
+      g.template_engine :haml
     end
+
+    # Cache Store
+    config.cache_store = :dalli_store
 
     # Add the fonts path
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')

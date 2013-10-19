@@ -28,7 +28,5 @@ Hrmap::Application.configure do
   # number of complex assets.
   config.assets.debug = false
 
-  config.cache_store = :dalli_store
-
   config.action_mailer.default_url_options = { :host => 'hrmap.dev' }
 end

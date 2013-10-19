@@ -9,6 +9,9 @@ gem "therubyracer"
 
 gem "mysql2"
 
+gem 'haml'
+gem "haml-rails"
+
 gem "turbolinks"
 gem 'jquery-rails', '~> 3.0.0'
 gem 'jquery-turbolinks'
